@@ -510,6 +510,111 @@
   .sum-fig strong{color:var(--navy-900);font-weight:700;}
   .sum-fig .hl{color:var(--gold-dark);font-weight:700;}
 
+  /* ---------- 章扉（CHAPTER COVER） ---------- */
+  .chapter{
+    margin:0 -60px;padding:140px 140px;
+    background:linear-gradient(135deg,var(--navy-900) 0%,var(--navy-800) 55%,var(--navy-700) 100%);
+    color:#fff;position:relative;overflow:hidden;
+  }
+  .chapter::before{
+    content:'';position:absolute;top:-150px;right:-150px;
+    width:500px;height:500px;border-radius:50%;
+    background:radial-gradient(circle,rgba(201,169,97,.15),transparent 70%);
+  }
+  .chapter::after{
+    content:'';position:absolute;bottom:-120px;left:-120px;
+    width:380px;height:380px;border-radius:50%;
+    background:radial-gradient(circle,rgba(201,169,97,.08),transparent 70%);
+  }
+  .chapter-inner{position:relative;z-index:2;display:grid;grid-template-columns:auto 1fr;gap:70px;align-items:center;}
+  .chapter-num{
+    font-family:'Inter',sans-serif;font-weight:300;font-size:180px;
+    color:var(--gold);line-height:1;letter-spacing:-.02em;
+    background:linear-gradient(135deg,#e8d6a2 0%,#a3863f 100%);
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .chapter-meta{
+    display:flex;flex-direction:column;gap:16px;
+  }
+  .chapter-kicker{
+    font-family:'Inter',sans-serif;font-weight:600;font-size:13px;
+    letter-spacing:.4em;color:var(--gold);
+    display:inline-flex;align-items:center;gap:16px;
+  }
+  .chapter-kicker::before{content:'';width:40px;height:1px;background:var(--gold);}
+  .chapter-title{
+    font-weight:900;font-size:54px;letter-spacing:.08em;line-height:1.4;color:#fff;
+  }
+  .chapter-lead{
+    font-size:17px;letter-spacing:.12em;line-height:2;color:rgba(255,255,255,.75);
+    margin-top:10px;max-width:640px;font-weight:300;
+  }
+
+  /* ---------- ナラティブ（本文主体）スライド ---------- */
+  .narrative{padding:100px 0 80px;border-top:1px solid var(--line);}
+  .narrative-inner{max-width:900px;margin:0 auto;}
+  .narrative-kicker{
+    font-family:'Inter',sans-serif;font-weight:600;font-size:12px;
+    letter-spacing:.4em;color:var(--gold-dark);
+    display:inline-flex;align-items:center;gap:14px;margin-bottom:30px;
+  }
+  .narrative-kicker::before{content:'';width:32px;height:1px;background:var(--gold);}
+  .narrative-head{
+    font-weight:900;font-size:40px;color:var(--navy-900);
+    letter-spacing:.08em;line-height:1.5;margin-bottom:40px;
+  }
+  .narrative-head em{
+    font-style:normal;color:var(--gold-dark);
+    background:linear-gradient(transparent 60%,var(--gold-50) 60%);
+    padding:0 4px;
+  }
+  .narrative-body{
+    font-size:18px;color:var(--text-700);line-height:2.2;
+    letter-spacing:.06em;font-weight:400;
+  }
+  .narrative-body p{margin-bottom:20px;}
+  .narrative-body p:last-child{margin-bottom:0;}
+  .narrative-body strong{color:var(--navy-900);font-weight:700;}
+  .narrative-body mark{
+    background:linear-gradient(transparent 60%,var(--gold-50) 60%);
+    color:var(--gold-dark);font-weight:700;padding:0 4px;
+  }
+
+  .pullquote{
+    margin:50px 0;padding:40px 48px;
+    background:var(--navy-50);border-left:4px solid var(--gold);
+    font-size:22px;font-weight:700;color:var(--navy-900);
+    letter-spacing:.1em;line-height:1.8;
+  }
+  .pullquote em{color:var(--gold-dark);font-style:normal;}
+
+  .feature-visual{
+    display:grid;grid-template-columns:auto 1fr;gap:50px;align-items:center;
+    margin:50px 0;padding:40px 48px;
+    background:var(--gold-50);border:1px solid var(--gold);
+  }
+  .feature-visual.navy{background:var(--navy-50);border-color:var(--line-strong);}
+  .feature-icon{
+    width:120px;height:120px;border-radius:50%;
+    background:linear-gradient(135deg,var(--gold-light),var(--gold-dark));
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Inter',sans-serif;font-weight:700;font-size:40px;color:#fff;
+    box-shadow:0 10px 30px rgba(163,134,63,.25);
+    flex-shrink:0;
+  }
+  .feature-visual.navy .feature-icon{
+    background:linear-gradient(135deg,var(--navy-700),var(--navy-900));
+    box-shadow:0 10px 30px rgba(10,31,68,.2);
+  }
+  .feature-visual-body h4{
+    font-size:24px;color:var(--navy-900);font-weight:700;
+    letter-spacing:.12em;margin-bottom:12px;
+  }
+  .feature-visual-body p{
+    font-size:16px;color:var(--text-700);line-height:1.9;letter-spacing:.06em;
+  }
+
   /* ---------- CTA ---------- */
   .cta{
     background:linear-gradient(135deg,var(--navy-900) 0%,var(--navy-700) 100%);
@@ -641,12 +746,44 @@
   </div>
 </section>
 
+<!-- ========== CHAPTER 01 ========== -->
+<section class="chapter">
+  <div class="chapter-inner">
+    <div class="chapter-num">01</div>
+    <div class="chapter-meta">
+      <div class="chapter-kicker">METHOD ONE</div>
+      <h2 class="chapter-title">資産配分全体の最適化</h2>
+      <p class="chapter-lead">運用結果の9割は資産配分で決まる。<br>まず全体設計の最適化が最重要です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NARRATIVE : 資産配分の考え方 ========== -->
+<section class="narrative">
+  <div class="narrative-inner">
+    <div class="narrative-kicker">WHY ALLOCATION MATTERS</div>
+    <h3 class="narrative-head">資産運用の結果の<em>9割は資産配分で決まる</em></h3>
+    <div class="narrative-body">
+      <p>資産運用の結果の<strong>9割は資産配分で決まる</strong>と言われています。</p>
+      <p>ですので、<strong>株式・債券・不動産</strong>といった各資産クラスをそれぞれ何パーセントずつ持つのが<strong>ご自身にとって最適か</strong>を考えながら、配分を決めていくことが資産運用においては一番大事だと考えています。</p>
+    </div>
+
+    <div class="pullquote">
+      銘柄選びよりも、まず「<em>配分</em>」を決めることから。
+    </div>
+
+    <div class="narrative-body">
+      <p>まずは <mark>全体のバランス</mark> を設計し、そのうえで各クラスの具体的な商品を選んでいく。この順序こそが、長期的に資産を守り育てる最短ルートです。</p>
+    </div>
+  </div>
+</section>
+
 <!-- ========== METHOD 01 ========== -->
 <section class="section">
   <div class="sec-head">
-    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 01</span></div>
-    <h2 class="sec-title">資産配分全体の最適化</h2>
-    <p class="sec-lead">運用結果の9割は資産配分で決まる。まず全体設計の最適化が最重要です。</p>
+    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 01　│　推奨ポートフォリオ</span></div>
+    <h2 class="sec-title">推奨される資産配分イメージ</h2>
+    <p class="sec-lead">富裕層の方に推奨される資産配分の一例。コア資産とサテライト資産のバランスで全体設計します。</p>
   </div>
 
   <div class="m1-layout">
@@ -746,12 +883,83 @@
   <div class="m1-quote">運用結果の <em>9割</em> は銘柄選びではなく「配分」で決まる</div>
 </section>
 
+<!-- ========== CHAPTER 02 ========== -->
+<section class="chapter">
+  <div class="chapter-inner">
+    <div class="chapter-num">02</div>
+    <div class="chapter-meta">
+      <div class="chapter-kicker">METHOD TWO</div>
+      <h2 class="chapter-title">インカムゲインの獲得</h2>
+      <p class="chapter-lead">役員報酬を投資収入で代替する。<br>外貨と円建て、2本柱の定期収入を設計します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NARRATIVE : インカムゲインとは ========== -->
+<section class="narrative">
+  <div class="narrative-inner">
+    <div class="narrative-kicker">WHAT IS INCOME GAIN</div>
+    <h3 class="narrative-head">インカムゲインとは<em>投資から得られる定期収入</em>のこと</h3>
+    <div class="narrative-body">
+      <p>インカムゲインとは、<strong>投資によって得ることができる定期収入</strong>のことです。</p>
+      <p>会社を売却され退職された富裕層の方は、<strong>役員報酬がなく定期収入がない</strong>方が非常に多くいらっしゃいます。そこで、売却代金を資産運用することで、その投資から<mark>インカムゲインを発生させて役員報酬の代わりに受け取り、生活費に充てていく</mark>のが理想的な形です。</p>
+      <p>そのうえで、収入は <strong>外貨建て</strong> と <strong>円建て</strong>、この2つのどちらからも得ることが大切だと考えています。</p>
+    </div>
+
+    <div class="pullquote">
+      役員報酬ゼロを、<em>外貨 ＋ 円建て</em> 2本柱のインカムゲインで代替する。
+    </div>
+  </div>
+</section>
+
+<!-- ========== NARRATIVE : 外貨建て収入 ========== -->
+<section class="narrative">
+  <div class="narrative-inner">
+    <div class="narrative-kicker">PILLAR 01　│　FOREIGN CURRENCY</div>
+    <h3 class="narrative-head">外貨建て収入は<br><em>ドル建て債券の利息収入</em>から</h3>
+
+    <div class="feature-visual">
+      <div class="feature-icon">USD</div>
+      <div class="feature-visual-body">
+        <h4>米ドル建てを中心とした外貨建て債券</h4>
+        <p>米ドルを含めた外貨建て債券への投資によって発生する <strong>利息収入</strong> を、インカムゲインとして受け取っていきます。</p>
+      </div>
+    </div>
+
+    <div class="narrative-body">
+      <p>1つ目の柱である外貨建て収入は、<strong>米ドルを含めた外貨建て債券への投資</strong>によって得られる <mark>利息収入</mark> が中心となります。</p>
+      <p>債券の利息は契約時点で利率が確定するため、<strong>将来の収入が読みやすい</strong> のが特徴です。為替・金利の観点でも分散効果が期待できます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NARRATIVE : 円建て収入 ========== -->
+<section class="narrative">
+  <div class="narrative-inner">
+    <div class="narrative-kicker">PILLAR 02　│　JAPANESE YEN</div>
+    <h3 class="narrative-head">円建て収入の中心は<br><em>国内不動産の家賃収入</em></h3>
+
+    <div class="feature-visual navy">
+      <div class="feature-icon">JPY</div>
+      <div class="feature-visual-body">
+        <h4>国内不動産投資による家賃インカム</h4>
+        <p>もう一つの柱である円建て収入の中心は、<strong>国内の不動産投資による家賃収入</strong>です。毎月のキャッシュフローとして安定的に積み上がります。</p>
+      </div>
+    </div>
+
+    <div class="narrative-body">
+      <p>円建ての収入は、国内生活費を <strong>同じ通貨でカバーできる</strong> ことが最大のメリットです。為替変動の影響を受けずに、安定した日本円の定期収入を確保できます。</p>
+      <p>外貨建てと円建て、<mark>通貨を分散した2本柱のインカム</mark> を構築することで、どの経済環境でも揺らぎにくいキャッシュフロー基盤をつくります。</p>
+    </div>
+  </div>
+</section>
+
 <!-- ========== METHOD 02 ========== -->
 <section class="section">
   <div class="sec-head">
-    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 02</span></div>
-    <h2 class="sec-title">インカムゲインの獲得</h2>
-    <p class="sec-lead">会社売却後は役員報酬がゼロになります。2本柱の定期収入で、現役時代と同等の生活水準を維持することが重要です。</p>
+    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 02　│　2本柱の利回りイメージ</span></div>
+    <h2 class="sec-title">インカムゲインの2本柱　利回り比較</h2>
+    <p class="sec-lead">外貨建て債券と国内RC不動産。それぞれの平均的な利回り水準をもとに、2本柱で役員報酬を代替します。</p>
   </div>
 
   <div class="m2-pair">
@@ -813,12 +1021,44 @@
   </div>
 </section>
 
+<!-- ========== CHAPTER 03 ========== -->
+<section class="chapter">
+  <div class="chapter-inner">
+    <div class="chapter-num">03</div>
+    <div class="chapter-meta">
+      <div class="chapter-kicker">METHOD THREE</div>
+      <h2 class="chapter-title">インフレ対策の強化</h2>
+      <p class="chapter-lead">会社売却後はインフレに弱くなる。<br>資産そのものでインフレをヘッジする戦略が必要です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NARRATIVE : なぜインフレに弱くなるか ========== -->
+<section class="narrative">
+  <div class="narrative-inner">
+    <div class="narrative-kicker">WHY WEAK TO INFLATION</div>
+    <h3 class="narrative-head">会社売却後は<br><em>インフレに弱くなる</em>という現実</h3>
+    <div class="narrative-body">
+      <p>会社を売却すると、インフレになったときに<strong>会社の収入が増えたり、報酬が増えることがありません</strong>。ですので、基本的には <mark>インフレに弱くなる</mark> 状態になります。</p>
+      <p>インフレになったとしても資産が減らないように、<strong>インフレ対策の強化</strong>が必要となります。</p>
+    </div>
+
+    <div class="pullquote">
+      インフレに強くなる方法は <em>インフレ時に資産価値が上昇する資産</em> を多く保有すること。
+    </div>
+
+    <div class="narrative-body">
+      <p>どうすればインフレに強くなるのかというと、<strong>インフレ時に資産価値が上昇するような資産</strong>を多く保有することです。具体的には、国内外の株式や国内不動産といった、物価上昇と連動して価値が上がる実物資産・成長資産が中心となります。</p>
+    </div>
+  </div>
+</section>
+
 <!-- ========== METHOD 03 ========== -->
 <section class="section">
   <div class="sec-head">
-    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 03</span></div>
-    <h2 class="sec-title">インフレ対策の強化</h2>
-    <p class="sec-lead">会社売却後はインフレに弱くなります。保有資産そのものでインフレをヘッジする戦略が必要です。</p>
+    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 03　│　インフレ耐性スコア</span></div>
+    <h2 class="sec-title">インフレに強い資産・弱い資産</h2>
+    <p class="sec-lead">資産クラスごとにインフレ耐性は大きく異なります。ランキングと対策資産を確認しましょう。</p>
   </div>
 
   <div class="m3-rank">
@@ -874,10 +1114,22 @@
   </div>
 </section>
 
+<!-- ========== CHAPTER 04 ========== -->
+<section class="chapter">
+  <div class="chapter-inner">
+    <div class="chapter-num">04</div>
+    <div class="chapter-meta">
+      <div class="chapter-kicker">METHOD FOUR</div>
+      <h2 class="chapter-title">サテライト資産への<br style="display:none">リスク分散</h2>
+      <p class="chapter-lead">コア資産90% ＋ サテライト10% のバランス運用で、<br>万が一のシナリオにも備えます。</p>
+    </div>
+  </div>
+</section>
+
 <!-- ========== METHOD 04 ========== -->
 <section class="section">
   <div class="sec-head">
-    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 04</span></div>
+    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 04　│　コア＆サテライト戦略</span></div>
     <h2 class="sec-title">サテライト資産へのリスク分散</h2>
     <p class="sec-lead">コア資産 90% ＋ サテライト資産 10% のバランス運用で、コアが毀損するシナリオに備えます。</p>
   </div>
@@ -937,36 +1189,65 @@
   </div>
 </section>
 
-<!-- ========== METHOD 05 ========== -->
-<section class="section">
-  <div class="sec-head">
-    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 05</span></div>
-    <h2 class="sec-title">最適な資産運用アドバイザー探し</h2>
-    <p class="sec-lead">売却後の新フェーズに合ったパートナーを見つけることが、資産を正しく守る最後の鍵です。</p>
+<!-- ========== CHAPTER 05 ========== -->
+<section class="chapter">
+  <div class="chapter-inner">
+    <div class="chapter-num">05</div>
+    <div class="chapter-meta">
+      <div class="chapter-kicker">METHOD FIVE</div>
+      <h2 class="chapter-title">最適な資産運用<br style="display:none">アドバイザー探し</h2>
+      <p class="chapter-lead">売却後の新フェーズに合ったパートナーを見つける。<br>資産を正しく守る最後の、そして最も重要な鍵です。</p>
+    </div>
   </div>
+</section>
 
-  <div class="m5-layout">
-    <div>
-      <div class="m5-step">
-        <div class="m5-step-num">01</div>
-        <div>
-          <h4 class="m5-step-ttl">なぜ新しいアドバイザーが必要か</h4>
-          <p class="m5-step-body">会社売却の前後では資産状況のフェーズが全く異なります。売却前の人脈には、売却後の富裕層向け資産運用を最適化できるアドバイザーが<em>いない可能性が高く</em>、新たに探すことが必要です。</p>
-        </div>
-      </div>
-      <div class="m5-step">
-        <div class="m5-step-num">02</div>
-        <div>
-          <h4 class="m5-step-ttl">理想的な探し方とタイミング</h4>
-          <p class="m5-step-body">
-            <em>理想：</em>会社売却前から <em>半年〜1年</em> かけて探し始める<br>
-            <em>売却後でも：</em>焦らず丁寧に選ぶことが最重要<br><br>
-            単なる商品販売ではなく、資産全体を包括的に設計できる<em>長期伴走型パートナー</em>を選びましょう。
-          </p>
-        </div>
+<!-- ========== NARRATIVE : 売却前後でフェーズが違う ========== -->
+<section class="narrative">
+  <div class="narrative-inner">
+    <div class="narrative-kicker">PHASE CHANGE</div>
+    <h3 class="narrative-head">売却前と売却後では<br><em>資産状況のフェーズが全く異なる</em></h3>
+    <div class="narrative-body">
+      <p>会社を売却する<strong>前</strong>と<strong>後</strong>とでは、資産状況のフェーズが全く異なります。</p>
+      <p>ですので、会社売却前の過去のつながりの中では、<mark>売却後の資産を最適化できる方が周りに少ない可能性が高い</mark>のではないかと考えています。</p>
+      <p>会社売却後の<strong>今の状況に合った資産配分を最適化できる資産運用アドバイザー</strong>を、新たに探す必要があります。</p>
+    </div>
+
+    <div class="pullquote">
+      売却前の人脈と、売却後に必要な人脈は<em>別物</em>。
+    </div>
+  </div>
+</section>
+
+<!-- ========== NARRATIVE : 半年〜1年かけて探す ========== -->
+<section class="narrative">
+  <div class="narrative-inner">
+    <div class="narrative-kicker">IDEAL TIMING</div>
+    <h3 class="narrative-head">できれば売却前から<br><em>半年〜1年かけて</em>探し始める</h3>
+
+    <div class="feature-visual">
+      <div class="feature-icon" style="font-size:22px;letter-spacing:.1em;">6-12<br>MONTH</div>
+      <div class="feature-visual-body">
+        <h4>時間をかけて最適なアドバイザーを見極める</h4>
+        <p>会社を売却する前から売却後を見据えて、<strong>半年〜1年かけて</strong> 資産運用のアドバイザーを少しずつ探しておき、売却後に資産運用をスムーズに開始するのが理想的です。</p>
       </div>
     </div>
 
+    <div class="narrative-body">
+      <p>もちろん、売却後でも問題ありません。ご自身に合ったアドバイザーを、<strong>焦らず丁寧に</strong> ご自身で探し、<mark>長期的に伴走してくれるパートナー</mark> を見つけることが何より大事です。</p>
+      <p>単なる商品販売者ではなく、資産全体を包括的に設計し、売却後のフェーズ特有の課題まで理解している <strong>長期伴走型パートナー</strong> を選びましょう。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== METHOD 05 ========== -->
+<section class="section">
+  <div class="sec-head">
+    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 05　│　アドバイザー選定の要点</span></div>
+    <h2 class="sec-title">良いアドバイザーの見分け方</h2>
+    <p class="sec-lead">売却後のフェーズに合った長期伴走型パートナーを見つけるための、3つのチェックポイント。</p>
+  </div>
+
+  <div class="m5-layout">
     <div>
       <div class="check-card">
         <div class="check-card-ttl">CHECKLIST</div>
@@ -984,8 +1265,10 @@
           <div class="txt">会社売却後の<strong>富裕層特有の課題</strong>を深く理解している</div>
         </div>
       </div>
+    </div>
 
-      <div class="m5-keypoints">
+    <div>
+      <div class="m5-keypoints" style="margin-top:0;">
         <div class="kp-ttl">アドバイザー選定の3つのポイント</div>
         <div class="kp-item">
           <strong>包括的な資産設計力</strong>
@@ -999,6 +1282,12 @@
           <strong>富裕層特化の知見</strong>
           <span>売却後特有の課題に対応</span>
         </div>
+      </div>
+
+      <div class="m2-combo" style="margin-top:30px;">
+        <div class="m2-combo-ttl">CONCLUSION</div>
+        <h3 class="m2-combo-sub">結論</h3>
+        <p class="m2-combo-body">単なる商品販売者ではなく、資産全体を包括的に設計し、<strong>長期伴走型</strong>で寄り添ってくれるパートナーを、時間をかけて見つけることが、会社売却後の資産を守る最後の鍵です。</p>
       </div>
     </div>
   </div>
