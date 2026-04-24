@@ -823,7 +823,7 @@
     position:relative;
   }
   .timeline-inner{
-    position:relative;padding:140px 120px 140px;
+    position:relative;padding:140px 120px 200px;
   }
   .timeline-track{
     position:relative;height:4px;background:linear-gradient(90deg,var(--navy-700) 0%,var(--navy-500) 40%,var(--gold) 100%);
@@ -850,10 +850,10 @@
     font-size:13px;font-weight:700;color:var(--navy-900);letter-spacing:.08em;line-height:1.6;
   }
   .timeline-span{
-    position:absolute;top:20px;left:50%;transform:translateX(-50%);
+    position:absolute;top:calc(100% + 90px);left:50%;transform:translateX(-50%);
     padding:10px 24px;background:var(--gold-50);border:1px solid var(--gold);
     font-family:'Inter',sans-serif;font-weight:800;font-size:15px;color:var(--gold-dark);
-    letter-spacing:.1em;white-space:nowrap;
+    letter-spacing:.1em;white-space:nowrap;z-index:3;
   }
   .timeline-heading{
     text-align:center;font-size:15px;font-weight:700;color:var(--navy-900);
