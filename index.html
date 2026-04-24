@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>会社売却後に資産を守る5つの方法 | 株式会社ウェルス・パートナー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#0a1f44;
+    --navy-800:#122a5c;
+    --navy-700:#1d3b78;
+    --navy-600:#2c4f94;
+    --navy-500:#4a6ba8;
+    --navy-100:#e8eef7;
+    --navy-50:#f4f7fb;
+    --gold:#c9a961;
+    --gold-light:#d9bd80;
+    --gold-dark:#a3863f;
+    --gold-50:#faf5e9;
+    --text-900:#0a1f44;
+    --text-700:#2a3a55;
+    --text-500:#5a6a82;
+    --text-400:#8a98ab;
+    --line:#e2e8f0;
+    --line-strong:#cbd5e3;
+    --warn:#c84b4b;
+    --warn-bg:#fdf2f2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{
+    background:#fff;color:var(--text-900);
+    font-family:'Zen Kaku Gothic New','Hiragino Sans','Yu Gothic',sans-serif;
+    font-weight:400;letter-spacing:.04em;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .doc{
+    max-width:1200px;margin:0 auto;padding:0 60px;
+    background:#fff;
+  }
+
+  /* ---------- 共通 ---------- */
+  .en{font-family:'Inter',sans-serif;letter-spacing:.2em;}
+  .section{padding:120px 0 100px;border-top:1px solid var(--line);}
+  .section:first-of-type{border-top:none;}
+
+  .sec-head{margin-bottom:70px;}
+  .sec-kicker{
+    display:inline-flex;align-items:center;gap:14px;
+    font-family:'Inter',sans-serif;font-weight:600;font-size:13px;
+    letter-spacing:.35em;color:var(--gold-dark);
+    margin-bottom:24px;
+  }
+  .sec-kicker::before{
+    content:'';width:40px;height:1px;background:var(--gold);
+  }
+  .sec-num{
+    font-family:'Inter',sans-serif;font-weight:300;font-size:16px;
+    color:var(--gold-dark);letter-spacing:.2em;
+  }
+  .sec-title{
+    font-weight:700;font-size:48px;color:var(--navy-900);
+    letter-spacing:.05em;line-height:1.4;
+  }
+  .sec-lead{
+    margin-top:20px;font-size:18px;font-weight:400;
+    color:var(--text-500);letter-spacing:.08em;line-height:1.9;
+    max-width:800px;
+  }
+
+  /* ---------- COVER ---------- */
+  .cover{
+    background:linear-gradient(135deg,var(--navy-900) 0%,var(--navy-800) 60%,var(--navy-700) 100%);
+    color:#fff;
+    position:relative;overflow:hidden;
+    padding:130px 80px;
+    margin-bottom:0;
+  }
+  .cover::before{
+    content:'';position:absolute;top:-200px;right:-200px;
+    width:600px;height:600px;border-radius:50%;
+    background:radial-gradient(circle,rgba(201,169,97,.15),transparent 70%);
+  }
+  .cover::after{
+    content:'';position:absolute;bottom:-100px;left:-100px;
+    width:400px;height:400px;border-radius:50%;
+    background:radial-gradient(circle,rgba(201,169,97,.08),transparent 70%);
+  }
+  .cover-inner{position:relative;z-index:2;max-width:900px;}
+  .cover-eyebrow{
+    font-family:'Inter',sans-serif;font-weight:500;font-size:13px;
+    letter-spacing:.4em;color:var(--gold);margin-bottom:40px;
+    padding-bottom:24px;border-bottom:1px solid rgba(201,169,97,.4);
+    display:inline-block;padding-right:40px;
+  }
+  .cover-sub{
+    font-size:18px;font-weight:400;color:rgba(255,255,255,.75);
+    letter-spacing:.2em;margin-bottom:40px;
+  }
+  .cover-title{
+    font-weight:900;font-size:76px;line-height:1.3;
+    letter-spacing:.04em;margin-bottom:40px;
+  }
+  .cover-title .num{
+    color:var(--gold);font-family:'Inter',sans-serif;
+    font-weight:700;font-size:96px;padding:0 8px;
+    display:inline-block;vertical-align:-4px;
+  }
+  .cover-desc{
+    font-size:18px;color:rgba(255,255,255,.8);
+    letter-spacing:.15em;line-height:1.9;
+    padding-top:36px;border-top:1px solid rgba(255,255,255,.15);
+    max-width:600px;
+  }
+  .cover-author{
+    margin-top:80px;
+    display:flex;align-items:center;gap:20px;
+  }
+  .cover-author-bar{width:48px;height:1px;background:var(--gold);}
+  .cover-author-text{
+    color:rgba(255,255,255,.85);font-size:15px;
+    letter-spacing:.2em;line-height:1.8;
+  }
+  .cover-author-text strong{
+    display:block;color:#fff;font-weight:700;font-size:17px;
+    letter-spacing:.25em;margin-bottom:4px;
+  }
+
+  /* ---------- OVERVIEW ---------- */
+  .ov-grid{
+    display:grid;grid-template-columns:1fr;gap:20px;
+  }
+  .ov-row{
+    display:grid;grid-template-columns:120px 1fr;
+    gap:40px;padding:36px 40px;
+    background:#fff;border:1px solid var(--line);
+    border-left:4px solid var(--gold);
+    transition:all .3s;
+  }
+  .ov-row:hover{box-shadow:0 8px 30px rgba(10,31,68,.06);}
+  .ov-row-num{
+    font-family:'Inter',sans-serif;font-weight:300;font-size:56px;
+    color:var(--gold);line-height:1;letter-spacing:.02em;
+  }
+  .ov-row-title{
+    font-weight:700;font-size:24px;color:var(--navy-900);
+    letter-spacing:.08em;margin-bottom:12px;
+  }
+  .ov-row-desc{
+    font-size:16px;font-weight:400;color:var(--text-500);
+    line-height:1.9;letter-spacing:.05em;
+  }
+  .ov-row-desc em{
+    font-style:normal;font-weight:700;color:var(--navy-800);
+  }
+
+  /* ---------- METHOD 1 : 資産配分 ---------- */
+  .m1-layout{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+  }
+  .m1-chart-wrap{text-align:center;}
+  .chart-label{
+    font-weight:700;font-size:20px;color:var(--navy-900);
+    letter-spacing:.15em;margin-bottom:24px;
+  }
+  .chart-sub{
+    font-family:'Inter',sans-serif;font-weight:500;font-size:12px;
+    color:var(--gold-dark);letter-spacing:.3em;margin-bottom:40px;
+  }
+
+  .m1-blocks{display:flex;flex-direction:column;gap:28px;}
+  .m1-block{
+    padding:32px 36px;background:var(--navy-50);
+    border-left:4px solid var(--navy-700);
+  }
+  .m1-block.gold{
+    background:var(--gold-50);border-left-color:var(--gold);
+  }
+  .m1-block-head{
+    display:flex;align-items:baseline;justify-content:space-between;
+    margin-bottom:14px;
+  }
+  .m1-block-ttl{
+    font-weight:700;font-size:20px;color:var(--navy-900);letter-spacing:.1em;
+  }
+  .m1-block-pct{
+    font-family:'Inter',sans-serif;font-weight:700;font-size:22px;
+    color:var(--navy-700);
+  }
+  .m1-block.gold .m1-block-pct{color:var(--gold-dark);}
+  .m1-block-desc{
+    font-size:15px;color:var(--text-500);line-height:1.9;
+    letter-spacing:.05em;margin-bottom:16px;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{
+    padding:7px 16px;font-size:13px;font-weight:500;
+    letter-spacing:.08em;color:var(--navy-800);
+    background:#fff;border:1px solid var(--line-strong);
+    border-radius:2px;
+  }
+  .chip.gold{color:var(--gold-dark);border-color:var(--gold);background:#fff;}
+
+  .m1-quote{
+    margin-top:50px;padding:32px 40px;
+    background:var(--navy-900);color:#fff;
+    text-align:center;
+    font-weight:500;font-size:20px;letter-spacing:.15em;line-height:1.8;
+    position:relative;
+  }
+  .m1-quote::before,.m1-quote::after{
+    content:'';position:absolute;top:50%;width:30px;height:1px;
+    background:var(--gold);
+  }
+  .m1-quote::before{left:40px;}
+  .m1-quote::after{right:40px;}
+  .m1-quote em{color:var(--gold);font-style:normal;font-weight:700;}
+
+  /* ---------- METHOD 2 : インカムゲイン ---------- */
+  .m2-pair{
+    display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:50px;
+  }
+  .pair-card{
+    padding:50px 40px;text-align:center;
+    border:1px solid var(--line);
+    background:#fff;position:relative;overflow:hidden;
+  }
+  .pair-card.usd{border-top:4px solid var(--gold);}
+  .pair-card.jpy{border-top:4px solid var(--navy-700);}
+  .pair-lbl{
+    font-family:'Inter',sans-serif;font-weight:600;font-size:12px;
+    letter-spacing:.35em;color:var(--gold-dark);margin-bottom:10px;
+  }
+  .pair-card.jpy .pair-lbl{color:var(--navy-700);}
+  .pair-ja{
+    font-weight:700;font-size:20px;color:var(--navy-900);
+    letter-spacing:.15em;margin-bottom:30px;
+  }
+  .pair-rate{
+    font-family:'Inter',sans-serif;font-weight:700;
+    font-size:88px;line-height:1;color:var(--gold);
+    letter-spacing:-.02em;
+  }
+  .pair-card.jpy .pair-rate{color:var(--navy-700);}
+  .pair-rate .unit{font-size:44px;font-weight:600;margin-left:4px;}
+  .pair-caption{
+    font-size:14px;color:var(--text-500);letter-spacing:.1em;
+    margin-top:20px;line-height:1.9;
+  }
+
+  .m2-note{
+    padding:40px 48px;background:var(--navy-50);
+    border-left:4px solid var(--navy-700);
+    display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;
+  }
+  .m2-note-head{
+    font-weight:700;font-size:28px;color:var(--navy-900);
+    letter-spacing:.1em;line-height:1.5;white-space:nowrap;
+  }
+  .m2-note-head em{color:var(--gold-dark);font-style:normal;}
+  .m2-note-body{
+    font-size:16px;color:var(--text-500);line-height:2;letter-spacing:.06em;
+  }
+
+  .m2-combo{
+    margin-top:30px;padding:36px 40px;
+    background:var(--gold-50);border:1px solid var(--gold);
+  }
+  .m2-combo-ttl{
+    font-family:'Inter',sans-serif;font-weight:600;font-size:12px;
+    letter-spacing:.35em;color:var(--gold-dark);margin-bottom:10px;
+  }
+  .m2-combo-sub{
+    font-weight:700;font-size:20px;color:var(--navy-900);
+    letter-spacing:.1em;margin-bottom:14px;
+  }
+  .m2-combo-body{
+    font-size:15px;color:var(--text-700);line-height:1.9;letter-spacing:.05em;
+  }
+  .m2-combo-body strong{color:var(--gold-dark);font-weight:700;}
+
+  /* ---------- METHOD 3 : インフレ ---------- */
+  .m3-rank{
+    background:#fff;border:1px solid var(--line);
+    padding:50px 60px;
+  }
+  .m3-rank-ttl{
+    font-weight:700;font-size:22px;color:var(--navy-900);
+    letter-spacing:.15em;margin-bottom:8px;text-align:center;
+  }
+  .m3-rank-sub{
+    font-family:'Inter',sans-serif;font-weight:500;font-size:11px;
+    letter-spacing:.3em;color:var(--gold-dark);
+    text-align:center;margin-bottom:40px;
+  }
+  .rank-row{
+    display:grid;grid-template-columns:160px 1fr 60px;
+    align-items:center;gap:24px;margin-bottom:18px;
+  }
+  .rank-row:last-child{margin-bottom:0;}
+  .rank-name{
+    font-weight:700;font-size:15px;color:var(--navy-900);
+    letter-spacing:.08em;text-align:right;
+  }
+  .rank-bar-wrap{
+    height:32px;background:var(--navy-50);position:relative;
+    border:1px solid var(--line);overflow:hidden;
+  }
+  .rank-bar{
+    height:100%;
+    background:linear-gradient(90deg,var(--gold-dark),var(--gold));
+  }
+  .rank-bar.mid{background:linear-gradient(90deg,var(--navy-500),var(--navy-400,#6b85b4));}
+  .rank-bar.low{background:linear-gradient(90deg,#a4b0c2,#c5cfdd);}
+  .rank-score{
+    font-family:'Inter',sans-serif;font-weight:700;font-size:20px;
+    color:var(--navy-800);
+  }
+
+  .m3-notes{
+    display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:40px;
+  }
+  .note-card{
+    padding:36px 40px;background:var(--navy-50);
+    border-left:4px solid var(--navy-700);
+  }
+  .note-card.strong{background:var(--gold-50);border-left-color:var(--gold);}
+  .note-card.warn{background:var(--warn-bg);border-left-color:var(--warn);}
+  .note-lbl{
+    font-family:'Inter',sans-serif;font-weight:600;font-size:12px;
+    letter-spacing:.3em;color:var(--navy-700);margin-bottom:12px;
+  }
+  .note-card.strong .note-lbl{color:var(--gold-dark);}
+  .note-card.warn .note-lbl{color:var(--warn);}
+  .note-ttl{
+    font-weight:700;font-size:20px;color:var(--navy-900);
+    letter-spacing:.1em;margin-bottom:16px;line-height:1.5;
+  }
+  .note-body{
+    font-size:15px;color:var(--text-700);line-height:1.9;letter-spacing:.05em;
+  }
+  .note-body strong{color:var(--navy-900);font-weight:700;}
+  .note-card.warn .note-body em{
+    font-style:normal;color:var(--warn);font-weight:700;
+  }
+
+  /* ---------- METHOD 4 : サテライト ---------- */
+  .m4-layout{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+  }
+  .m4-diagram{
+    display:flex;align-items:center;justify-content:center;gap:24px;
+    padding:30px 0;
+  }
+  .m4-core,.m4-sat{
+    aspect-ratio:1/1;border-radius:50%;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:20px;position:relative;
+  }
+  .m4-core{
+    width:320px;
+    background:radial-gradient(circle at 30% 30%,#1d3b78,#0a1f44);
+    color:#fff;
+    box-shadow:0 20px 60px rgba(10,31,68,.25);
+  }
+  .m4-sat{
+    width:180px;
+    background:radial-gradient(circle at 30% 30%,var(--gold-light),var(--gold-dark));
+    color:#fff;
+    box-shadow:0 12px 36px rgba(163,134,63,.3);
+  }
+  .m4-pct{
+    font-family:'Inter',sans-serif;font-weight:800;
+    font-size:56px;line-height:1;letter-spacing:-.02em;
+  }
+  .m4-sat .m4-pct{font-size:40px;}
+  .m4-lbl{
+    font-family:'Inter',sans-serif;font-weight:600;font-size:12px;
+    letter-spacing:.35em;margin-top:12px;opacity:.95;
+  }
+  .m4-ja{
+    font-weight:700;font-size:18px;letter-spacing:.15em;margin-top:8px;
+  }
+  .m4-sat .m4-ja{font-size:14px;}
+  .m4-items{
+    font-size:12px;font-weight:400;opacity:.85;margin-top:12px;line-height:1.8;
+    letter-spacing:.05em;
+  }
+
+  .table-clean{
+    width:100%;border-collapse:collapse;background:#fff;
+    border:1px solid var(--line);
+  }
+  .table-clean th,.table-clean td{
+    padding:22px 24px;text-align:left;
+    border-bottom:1px solid var(--line);
+    font-size:15px;
+  }
+  .table-clean th{
+    font-family:'Inter',sans-serif;font-weight:600;font-size:11px;
+    letter-spacing:.3em;color:var(--gold-dark);
+    background:var(--navy-50);border-bottom:2px solid var(--navy-700);
+  }
+  .table-clean td{color:var(--text-700);font-weight:400;letter-spacing:.05em;}
+  .table-clean td:first-child{color:var(--navy-900);font-weight:700;letter-spacing:.1em;}
+  .table-clean td strong{color:var(--gold-dark);font-weight:700;}
+  .table-clean tr:last-child td{border-bottom:none;}
+
+  /* ---------- METHOD 5 : アドバイザー ---------- */
+  .m5-layout{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:flex-start;
+  }
+  .m5-step{
+    display:grid;grid-template-columns:80px 1fr;gap:24px;margin-bottom:48px;
+  }
+  .m5-step:last-child{margin-bottom:0;}
+  .m5-step-num{
+    font-family:'Inter',sans-serif;font-weight:300;font-size:56px;
+    color:var(--gold);line-height:1;letter-spacing:.02em;
+    border-bottom:2px solid var(--gold);padding-bottom:8px;
+  }
+  .m5-step-ttl{
+    font-weight:700;font-size:20px;color:var(--navy-900);
+    letter-spacing:.1em;line-height:1.5;margin-bottom:16px;
+  }
+  .m5-step-body{
+    font-size:15px;color:var(--text-500);line-height:2;letter-spacing:.05em;
+  }
+  .m5-step-body em{
+    font-style:normal;font-weight:700;color:var(--navy-800);
+    background:linear-gradient(transparent 60%,var(--gold-50) 60%);
+  }
+
+  .check-card{
+    background:var(--navy-900);color:#fff;padding:50px 48px;
+  }
+  .check-card-ttl{
+    font-family:'Inter',sans-serif;font-weight:600;font-size:12px;
+    letter-spacing:.35em;color:var(--gold);margin-bottom:10px;
+  }
+  .check-card-head{
+    font-weight:700;font-size:22px;letter-spacing:.1em;margin-bottom:30px;
+    padding-bottom:20px;border-bottom:1px solid rgba(201,169,97,.3);
+  }
+  .check-item{
+    display:grid;grid-template-columns:36px 1fr;gap:20px;
+    padding:20px 0;border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .check-item:last-child{border-bottom:none;}
+  .check-item .idx{
+    font-family:'Inter',sans-serif;font-weight:700;font-size:18px;
+    color:var(--gold);letter-spacing:.05em;
+  }
+  .check-item .txt{
+    font-size:15px;line-height:1.9;letter-spacing:.05em;color:rgba(255,255,255,.9);
+  }
+  .check-item .txt strong{color:var(--gold);font-weight:700;}
+
+  .m5-keypoints{
+    margin-top:30px;padding:32px 40px;background:var(--gold-50);
+    border:1px solid var(--gold);
+  }
+  .kp-ttl{
+    font-weight:700;font-size:18px;color:var(--navy-900);
+    letter-spacing:.1em;margin-bottom:20px;
+  }
+  .kp-item{
+    display:grid;grid-template-columns:200px 1fr;gap:20px;
+    padding:14px 0;border-bottom:1px dashed var(--gold);
+    font-size:14px;letter-spacing:.05em;
+  }
+  .kp-item:last-child{border-bottom:none;}
+  .kp-item strong{color:var(--navy-900);font-weight:700;}
+  .kp-item span{color:var(--text-500);}
+
+  /* ---------- SUMMARY ---------- */
+  .sum-table{
+    width:100%;border-collapse:collapse;background:#fff;
+    border-top:2px solid var(--navy-900);
+  }
+  .sum-table th,.sum-table td{
+    padding:28px 22px;text-align:left;
+    border-bottom:1px solid var(--line);vertical-align:middle;
+  }
+  .sum-table thead th{
+    font-family:'Inter',sans-serif;font-weight:600;font-size:11px;
+    letter-spacing:.3em;color:var(--gold-dark);
+    background:var(--navy-50);padding-top:20px;padding-bottom:20px;
+    border-bottom:2px solid var(--navy-700);
+  }
+  .sum-num{
+    font-family:'Inter',sans-serif;font-weight:700;font-size:32px;
+    color:var(--gold);line-height:1;display:inline-block;margin-right:14px;
+    vertical-align:-4px;
+  }
+  .sum-method{
+    font-weight:700;font-size:17px;color:var(--navy-900);
+    letter-spacing:.1em;display:inline-block;
+  }
+  .sum-key{
+    font-size:15px;color:var(--text-700);line-height:1.8;
+    font-weight:500;letter-spacing:.05em;
+  }
+  .sum-fig{
+    font-size:14px;line-height:1.9;color:var(--text-500);
+    letter-spacing:.05em;
+  }
+  .sum-fig strong{color:var(--navy-900);font-weight:700;}
+  .sum-fig .hl{color:var(--gold-dark);font-weight:700;}
+
+  /* ---------- CTA ---------- */
+  .cta{
+    background:linear-gradient(135deg,var(--navy-900) 0%,var(--navy-700) 100%);
+    color:#fff;padding:100px 80px;margin-top:100px;position:relative;overflow:hidden;
+  }
+  .cta::before{
+    content:'';position:absolute;top:-150px;right:-150px;
+    width:500px;height:500px;border-radius:50%;
+    background:radial-gradient(circle,rgba(201,169,97,.12),transparent 70%);
+  }
+  .cta-inner{position:relative;z-index:2;text-align:center;max-width:800px;margin:0 auto;}
+  .cta-eyebrow{
+    font-family:'Inter',sans-serif;font-weight:500;font-size:13px;
+    letter-spacing:.4em;color:var(--gold);margin-bottom:24px;
+  }
+  .cta-title{
+    font-weight:900;font-size:48px;letter-spacing:.1em;line-height:1.4;
+    margin-bottom:20px;
+  }
+  .cta-sub{
+    font-size:16px;color:rgba(255,255,255,.8);letter-spacing:.15em;
+    line-height:1.9;margin-bottom:60px;
+  }
+  .cta-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(201,169,97,.3);
+    padding:50px 60px;text-align:left;margin-bottom:50px;
+    backdrop-filter:blur(10px);
+  }
+  .cta-card-ttl{
+    text-align:center;
+    font-weight:700;font-size:20px;color:var(--gold);
+    letter-spacing:.2em;margin-bottom:30px;
+    padding-bottom:20px;border-bottom:1px solid rgba(201,169,97,.25);
+  }
+  .cta-item{
+    display:grid;grid-template-columns:24px 1fr;gap:20px;
+    padding:16px 0;font-size:17px;line-height:1.8;
+    letter-spacing:.08em;color:rgba(255,255,255,.95);
+  }
+  .cta-item::before{
+    content:'';width:12px;height:12px;background:var(--gold);
+    transform:rotate(45deg);margin-top:12px;
+  }
+  .cta-company{
+    padding-top:40px;border-top:1px solid rgba(255,255,255,.15);
+  }
+  .cta-company-en{
+    font-family:'Inter',sans-serif;font-weight:500;font-size:12px;
+    letter-spacing:.4em;color:var(--gold);margin-bottom:12px;
+  }
+  .cta-company-ja{
+    font-weight:700;font-size:22px;letter-spacing:.2em;margin-bottom:10px;
+  }
+  .cta-company-rep{
+    font-size:14px;color:rgba(255,255,255,.7);letter-spacing:.2em;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="doc">
+
+<!-- ========== COVER ========== -->
+<section class="cover">
+  <div class="cover-inner">
+    <div class="cover-eyebrow">WEALTH&nbsp;PARTNER　│　特典動画資料</div>
+    <div class="cover-sub">株式会社ウェルス・パートナー</div>
+    <h1 class="cover-title">
+      会社売却後に資産を守る<br>
+      <span class="num">5</span>つの方法
+    </h1>
+    <p class="cover-desc">会社売却オーナー・富裕層の方のための資産運用ガイド</p>
+    <div class="cover-author">
+      <div class="cover-author-bar"></div>
+      <div class="cover-author-text">
+        <strong>株式会社ウェルス・パートナー</strong>
+        代表　世古口　俊介
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OVERVIEW ========== -->
+<section class="section">
+  <div class="sec-head">
+    <div class="sec-kicker">OVERVIEW</div>
+    <h2 class="sec-title">5つの方法　全体概要</h2>
+    <p class="sec-lead">会社売却後の資産を正しく守るための5つの柱。それぞれが独立しているのではなく、組み合わせることで相乗効果が生まれます。</p>
+  </div>
+
+  <div class="ov-grid">
+    <div class="ov-row">
+      <div class="ov-row-num">01</div>
+      <div>
+        <h3 class="ov-row-title">資産配分全体の最適化</h3>
+        <p class="ov-row-desc">資産運用の結果の<em>9割</em>は資産配分で決まる。コア資産（株式・債券・不動産）を軸にした戦略が最重要。</p>
+      </div>
+    </div>
+    <div class="ov-row">
+      <div class="ov-row-num">02</div>
+      <div>
+        <h3 class="ov-row-title">インカムゲインの獲得</h3>
+        <p class="ov-row-desc">外貨建て収入（USD債券 平均<em>5.0%</em>）＋ 円建て収入（都内RC不動産 <em>4%台</em>）の2本柱で役員報酬を代替。</p>
+      </div>
+    </div>
+    <div class="ov-row">
+      <div class="ov-row-num">03</div>
+      <div>
+        <h3 class="ov-row-title">インフレ対策の強化</h3>
+        <p class="ov-row-desc">国内外の株式・国内不動産を保有することで、<em>インフレに連動</em>した資産・収入の増加を実現。</p>
+      </div>
+    </div>
+    <div class="ov-row">
+      <div class="ov-row-num">04</div>
+      <div>
+        <h3 class="ov-row-title">サテライト資産へのリスク分散</h3>
+        <p class="ov-row-desc">REIT・ヘッジファンド・暗号資産・金などへの一部配分で、万が一の<em>リスクに備える</em>。</p>
+      </div>
+    </div>
+    <div class="ov-row">
+      <div class="ov-row-num">05</div>
+      <div>
+        <h3 class="ov-row-title">最適な資産運用アドバイザー探し</h3>
+        <p class="ov-row-desc">売却前から<em>半年〜1年</em>かけて探し始め、長期的に伴走してくれるパートナーを見つけることが成功の鍵。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== METHOD 01 ========== -->
+<section class="section">
+  <div class="sec-head">
+    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 01</span></div>
+    <h2 class="sec-title">資産配分全体の最適化</h2>
+    <p class="sec-lead">運用結果の9割は資産配分で決まる。まず全体設計の最適化が最重要です。</p>
+  </div>
+
+  <div class="m1-layout">
+    <div class="m1-chart-wrap">
+      <div class="chart-label">富裕層向け　推奨資産配分</div>
+      <div class="chart-sub">RECOMMENDED PORTFOLIO ALLOCATION</div>
+      <svg viewBox="0 0 500 500" width="500" height="500" style="display:block;margin:0 auto;overflow:visible;">
+        <defs>
+          <linearGradient id="gGold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#d9bd80"/>
+            <stop offset="100%" stop-color="#a3863f"/>
+          </linearGradient>
+          <linearGradient id="gNavy1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2c4f94"/>
+            <stop offset="100%" stop-color="#0a1f44"/>
+          </linearGradient>
+          <linearGradient id="gNavy2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4a6ba8"/>
+            <stop offset="100%" stop-color="#1d3b78"/>
+          </linearGradient>
+          <linearGradient id="gSat" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c9a961"/>
+            <stop offset="100%" stop-color="#826835"/>
+          </linearGradient>
+        </defs>
+
+        <!-- ドーナツ本体 (cx=250, cy=250, r=140, stroke-width=80, 円周=879.65) -->
+        <!-- 株35% (0-35%) -->
+        <circle cx="250" cy="250" r="140" fill="none" stroke="url(#gGold)" stroke-width="80"
+          stroke-dasharray="307.88 879.65" stroke-dashoffset="0" transform="rotate(-90 250 250)"/>
+        <!-- 債30% (35-65%) -->
+        <circle cx="250" cy="250" r="140" fill="none" stroke="url(#gNavy1)" stroke-width="80"
+          stroke-dasharray="263.90 879.65" stroke-dashoffset="-307.88" transform="rotate(-90 250 250)"/>
+        <!-- 不動産25% (65-90%) -->
+        <circle cx="250" cy="250" r="140" fill="none" stroke="url(#gNavy2)" stroke-width="80"
+          stroke-dasharray="219.91 879.65" stroke-dashoffset="-571.78" transform="rotate(-90 250 250)"/>
+        <!-- サテ10% (90-100%) -->
+        <circle cx="250" cy="250" r="140" fill="none" stroke="url(#gSat)" stroke-width="80"
+          stroke-dasharray="87.97 879.65" stroke-dashoffset="-791.69" transform="rotate(-90 250 250)"/>
+
+        <!-- リーダー線 + ラベル -->
+        <!-- 株式 中央角 63° 方向 -->
+        <line x1="401.5" y1="172.8" x2="435" y2="155" stroke="#a3863f" stroke-width="1"/>
+        <text x="442" y="150" text-anchor="start" fill="#0a1f44" style="font-family:'Zen Kaku Gothic New';font-size:15px;font-weight:700;letter-spacing:.08em;">株　式</text>
+        <text x="442" y="172" text-anchor="start" fill="#a3863f" style="font-family:'Inter';font-size:22px;font-weight:700;">35%</text>
+
+        <!-- 債券 中央角 180° -->
+        <line x1="250" y1="420" x2="250" y2="455" stroke="#1d3b78" stroke-width="1"/>
+        <text x="250" y="475" text-anchor="middle" fill="#0a1f44" style="font-family:'Zen Kaku Gothic New';font-size:15px;font-weight:700;letter-spacing:.08em;">債　券</text>
+        <text x="250" y="497" text-anchor="middle" fill="#0a1f44" style="font-family:'Inter';font-size:22px;font-weight:700;">30%</text>
+
+        <!-- 不動産 中央角 279° -->
+        <line x1="82.1" y1="223.4" x2="45" y2="218" stroke="#1d3b78" stroke-width="1"/>
+        <text x="38" y="215" text-anchor="end" fill="#0a1f44" style="font-family:'Zen Kaku Gothic New';font-size:15px;font-weight:700;letter-spacing:.08em;">不動産</text>
+        <text x="38" y="237" text-anchor="end" fill="#1d3b78" style="font-family:'Inter';font-size:22px;font-weight:700;">25%</text>
+
+        <!-- サテライト 中央角 342° -->
+        <line x1="197.5" y1="88.3" x2="183" y2="55" stroke="#a3863f" stroke-width="1"/>
+        <text x="178" y="42" text-anchor="end" fill="#0a1f44" style="font-family:'Zen Kaku Gothic New';font-size:13px;font-weight:700;letter-spacing:.08em;">サテライト</text>
+        <text x="178" y="62" text-anchor="end" fill="#a3863f" style="font-family:'Inter';font-size:18px;font-weight:700;">10%</text>
+
+        <!-- 中央 -->
+        <text x="250" y="245" text-anchor="middle" fill="#a3863f" style="font-family:'Inter';font-size:11px;font-weight:600;letter-spacing:.4em;">PORTFOLIO</text>
+        <text x="250" y="268" text-anchor="middle" fill="#5a6a82" style="font-family:'Zen Kaku Gothic New';font-size:12px;font-weight:500;letter-spacing:.25em;">資産配分</text>
+      </svg>
+    </div>
+
+    <div class="m1-blocks">
+      <div class="m1-block gold">
+        <div class="m1-block-head">
+          <div class="m1-block-ttl">コア資産</div>
+          <div class="m1-block-pct">約 90%</div>
+        </div>
+        <p class="m1-block-desc">株式・債券・不動産の3本柱で、安定したリターンと定期収入を確保します。</p>
+        <div class="chips">
+          <span class="chip gold">株式　35%</span>
+          <span class="chip gold">債券　30%</span>
+          <span class="chip gold">不動産　25%</span>
+        </div>
+      </div>
+      <div class="m1-block">
+        <div class="m1-block-head">
+          <div class="m1-block-ttl">サテライト資産</div>
+          <div class="m1-block-pct">約 10%</div>
+        </div>
+        <p class="m1-block-desc">リスク分散目的で一部資金を配分。万が一に備えた保険的な役割を担います。</p>
+        <div class="chips">
+          <span class="chip">REIT</span>
+          <span class="chip">ヘッジファンド</span>
+          <span class="chip">暗号資産</span>
+          <span class="chip">金・銀・原油</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="m1-quote">運用結果の <em>9割</em> は銘柄選びではなく「配分」で決まる</div>
+</section>
+
+<!-- ========== METHOD 02 ========== -->
+<section class="section">
+  <div class="sec-head">
+    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 02</span></div>
+    <h2 class="sec-title">インカムゲインの獲得</h2>
+    <p class="sec-lead">会社売却後は役員報酬がゼロになります。2本柱の定期収入で、現役時代と同等の生活水準を維持することが重要です。</p>
+  </div>
+
+  <div class="m2-pair">
+    <div class="pair-card usd">
+      <div class="pair-lbl">FOREIGN CURRENCY</div>
+      <div class="pair-ja">外貨建て収入</div>
+      <div class="pair-rate">5.0<span class="unit">%</span></div>
+      <div class="pair-caption">ドル建て債券　平均利回り</div>
+    </div>
+    <div class="pair-card jpy">
+      <div class="pair-lbl">JAPANESE YEN</div>
+      <div class="pair-ja">円建て収入</div>
+      <div class="pair-rate">4.2<span class="unit">%</span></div>
+      <div class="pair-caption">都内RCマンション　表面利回り</div>
+    </div>
+  </div>
+
+  <!-- バーチャート -->
+  <svg viewBox="0 0 1000 200" width="100%" style="display:block;margin-bottom:40px;">
+    <defs>
+      <linearGradient id="barGold" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#d9bd80"/>
+        <stop offset="100%" stop-color="#a3863f"/>
+      </linearGradient>
+      <linearGradient id="barNavy" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#4a6ba8"/>
+        <stop offset="100%" stop-color="#1d3b78"/>
+      </linearGradient>
+    </defs>
+    <!-- 軸 -->
+    <line x1="200" y1="30" x2="200" y2="150" stroke="#cbd5e3" stroke-width="1"/>
+    <line x1="200" y1="150" x2="960" y2="150" stroke="#cbd5e3" stroke-width="1"/>
+    <!-- グリッド -->
+    <line x1="200" y1="60" x2="960" y2="60" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="200" y1="105" x2="960" y2="105" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="190" y="35" text-anchor="end" fill="#8a98ab" style="font-family:'Inter';font-size:11px;font-weight:500;">6%</text>
+    <text x="190" y="64" text-anchor="end" fill="#8a98ab" style="font-family:'Inter';font-size:11px;font-weight:500;">5%</text>
+    <text x="190" y="109" text-anchor="end" fill="#8a98ab" style="font-family:'Inter';font-size:11px;font-weight:500;">3%</text>
+    <text x="190" y="154" text-anchor="end" fill="#8a98ab" style="font-family:'Inter';font-size:11px;font-weight:500;">0%</text>
+    <!-- 外貨 5.0% (y=150-90=60) -->
+    <rect x="290" y="60" width="220" height="90" fill="url(#barGold)"/>
+    <text x="400" y="50" text-anchor="middle" fill="#a3863f" style="font-family:'Inter';font-size:26px;font-weight:700;">5.0%</text>
+    <text x="400" y="175" text-anchor="middle" fill="#0a1f44" style="font-family:'Zen Kaku Gothic New';font-size:14px;font-weight:700;letter-spacing:.1em;">外貨建て収入（USD債券）</text>
+    <!-- 円 4.2% (y=150-75.6=74.4) -->
+    <rect x="650" y="75" width="220" height="75" fill="url(#barNavy)"/>
+    <text x="760" y="65" text-anchor="middle" fill="#1d3b78" style="font-family:'Inter';font-size:26px;font-weight:700;">4.2%</text>
+    <text x="760" y="175" text-anchor="middle" fill="#0a1f44" style="font-family:'Zen Kaku Gothic New';font-size:14px;font-weight:700;letter-spacing:.1em;">円建て収入（都内RC不動産）</text>
+  </svg>
+
+  <div class="m2-note">
+    <div class="m2-note-head">役員報酬ゼロを<br><em>2本柱の定期収入</em>で代替</div>
+    <div class="m2-note-body">会社売却後は役員報酬がなくなります。外貨と円建て、2つのインカムで現役時代と同等の生活水準を維持することが大前提です。</div>
+  </div>
+
+  <div class="m2-combo">
+    <div class="m2-combo-ttl">COMBINATION EFFECT</div>
+    <h3 class="m2-combo-sub">2本柱の組み合わせ効果</h3>
+    <p class="m2-combo-body">外貨建てで<strong>為替・金利メリット</strong>を享受しつつ、円建て不動産で<strong>国内生活費</strong>をカバー。通貨分散も同時に実現します。</p>
+  </div>
+</section>
+
+<!-- ========== METHOD 03 ========== -->
+<section class="section">
+  <div class="sec-head">
+    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 03</span></div>
+    <h2 class="sec-title">インフレ対策の強化</h2>
+    <p class="sec-lead">会社売却後はインフレに弱くなります。保有資産そのものでインフレをヘッジする戦略が必要です。</p>
+  </div>
+
+  <div class="m3-rank">
+    <div class="m3-rank-ttl">インフレに強い資産　ランキング</div>
+    <div class="m3-rank-sub">INFLATION RESISTANCE SCORE　(/100)</div>
+    <div class="rank-row">
+      <div class="rank-name">国内外株式</div>
+      <div class="rank-bar-wrap"><div class="rank-bar" style="width:85%;"></div></div>
+      <div class="rank-score">85</div>
+    </div>
+    <div class="rank-row">
+      <div class="rank-name">国内不動産</div>
+      <div class="rank-bar-wrap"><div class="rank-bar" style="width:80%;"></div></div>
+      <div class="rank-score">80</div>
+    </div>
+    <div class="rank-row">
+      <div class="rank-name">外貨建て債券</div>
+      <div class="rank-bar-wrap"><div class="rank-bar mid" style="width:65%;background:linear-gradient(90deg,#4a6ba8,#1d3b78);"></div></div>
+      <div class="rank-score">65</div>
+    </div>
+    <div class="rank-row">
+      <div class="rank-name">国内債券</div>
+      <div class="rank-bar-wrap"><div class="rank-bar mid" style="width:40%;background:linear-gradient(90deg,#8a98ab,#5a6a82);"></div></div>
+      <div class="rank-score">40</div>
+    </div>
+    <div class="rank-row">
+      <div class="rank-name">現金・預金</div>
+      <div class="rank-bar-wrap"><div class="rank-bar low" style="width:20%;"></div></div>
+      <div class="rank-score">20</div>
+    </div>
+  </div>
+
+  <div class="m3-notes">
+    <div class="note-card strong">
+      <div class="note-lbl">STRONG ASSETS　│　インフレに強い資産</div>
+      <h3 class="note-ttl">株式＆不動産のインフレ連動性</h3>
+      <p class="note-body">
+        <strong>国内外の株式：</strong>物価上昇に伴い株価が上昇しやすく、資産価値が増大<br><br>
+        <strong>国内不動産：</strong>資産価値の上昇 ＋ 家賃収入の増加の二重効果
+      </p>
+    </div>
+    <div class="note-card warn">
+      <div class="note-lbl">CAUTION　│　売却後の注意点</div>
+      <h3 class="note-ttl">報酬・売上の増加がない</h3>
+      <p class="note-body">会社収入がなくなると、インフレ時に報酬・売上が増える機会がなく、相対的に<em>資産が目減り</em>するリスクが高まります。</p>
+    </div>
+  </div>
+
+  <div class="m2-combo" style="margin-top:30px;">
+    <div class="m2-combo-ttl">RECOMMENDATION</div>
+    <h3 class="m2-combo-sub">推奨対策資産</h3>
+    <p class="m2-combo-body"><strong>国内外株式 ＋ 国内RC不動産</strong> の組み合わせが最も効果的。物価上昇と連動して資産価値・収入が増加します。</p>
+  </div>
+</section>
+
+<!-- ========== METHOD 04 ========== -->
+<section class="section">
+  <div class="sec-head">
+    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 04</span></div>
+    <h2 class="sec-title">サテライト資産へのリスク分散</h2>
+    <p class="sec-lead">コア資産 90% ＋ サテライト資産 10% のバランス運用で、コアが毀損するシナリオに備えます。</p>
+  </div>
+
+  <div class="m4-layout">
+    <div class="m4-diagram">
+      <div class="m4-core">
+        <div class="m4-pct">90%</div>
+        <div class="m4-lbl">CORE ASSET</div>
+        <div class="m4-ja">コア資産</div>
+        <div class="m4-items">株式 ／ 債券 ／ 不動産</div>
+      </div>
+      <div class="m4-sat">
+        <div class="m4-pct">10%</div>
+        <div class="m4-lbl">SATELLITE</div>
+        <div class="m4-ja">サテライト</div>
+        <div class="m4-items">REIT／HF<br>暗号資産／金</div>
+      </div>
+    </div>
+
+    <div>
+      <table class="table-clean">
+        <thead>
+          <tr><th>区分</th><th>配分</th><th>主な資産</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>コア資産</td>
+            <td><strong>約 90%</strong></td>
+            <td>国内外株式・外貨建て債券・国内不動産</td>
+          </tr>
+          <tr>
+            <td>サテライト</td>
+            <td><strong>約 10%</strong></td>
+            <td>REIT・ヘッジファンド・暗号資産・コモディティ</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-card strong" style="margin-top:30px;">
+        <div class="note-lbl">ROLE</div>
+        <h3 class="note-ttl">サテライト資産の役割</h3>
+        <p class="note-body">コア資産が大きく毀損するシナリオへの<strong>分散ヘッジ</strong>が主目的。全体の10%程度に留め、リスクを限定します。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="m2-combo" style="margin-top:40px;">
+    <div class="m2-combo-ttl">TYPICAL SATELLITE ASSETS</div>
+    <h3 class="m2-combo-sub">代表的なサテライト資産</h3>
+    <div class="chips" style="margin-top:14px;">
+      <span class="chip gold">REIT（不動産投資信託）</span>
+      <span class="chip gold">ヘッジファンド</span>
+      <span class="chip gold">暗号資産</span>
+      <span class="chip gold">金・銀・原油</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== METHOD 05 ========== -->
+<section class="section">
+  <div class="sec-head">
+    <div class="sec-kicker"><span class="en" style="color:var(--gold-dark);font-weight:500;">METHOD 05</span></div>
+    <h2 class="sec-title">最適な資産運用アドバイザー探し</h2>
+    <p class="sec-lead">売却後の新フェーズに合ったパートナーを見つけることが、資産を正しく守る最後の鍵です。</p>
+  </div>
+
+  <div class="m5-layout">
+    <div>
+      <div class="m5-step">
+        <div class="m5-step-num">01</div>
+        <div>
+          <h4 class="m5-step-ttl">なぜ新しいアドバイザーが必要か</h4>
+          <p class="m5-step-body">会社売却の前後では資産状況のフェーズが全く異なります。売却前の人脈には、売却後の富裕層向け資産運用を最適化できるアドバイザーが<em>いない可能性が高く</em>、新たに探すことが必要です。</p>
+        </div>
+      </div>
+      <div class="m5-step">
+        <div class="m5-step-num">02</div>
+        <div>
+          <h4 class="m5-step-ttl">理想的な探し方とタイミング</h4>
+          <p class="m5-step-body">
+            <em>理想：</em>会社売却前から <em>半年〜1年</em> かけて探し始める<br>
+            <em>売却後でも：</em>焦らず丁寧に選ぶことが最重要<br><br>
+            単なる商品販売ではなく、資産全体を包括的に設計できる<em>長期伴走型パートナー</em>を選びましょう。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="check-card">
+        <div class="check-card-ttl">CHECKLIST</div>
+        <div class="check-card-head">良いアドバイザーの見分け方</div>
+        <div class="check-item">
+          <div class="idx">01</div>
+          <div class="txt">特定商品の勧誘ではなく、<strong>資産全体の設計</strong>をしてくれる</div>
+        </div>
+        <div class="check-item">
+          <div class="idx">02</div>
+          <div class="txt"><strong>長期的な伴走</strong>を前提とした提案をしてくれる</div>
+        </div>
+        <div class="check-item">
+          <div class="idx">03</div>
+          <div class="txt">会社売却後の<strong>富裕層特有の課題</strong>を深く理解している</div>
+        </div>
+      </div>
+
+      <div class="m5-keypoints">
+        <div class="kp-ttl">アドバイザー選定の3つのポイント</div>
+        <div class="kp-item">
+          <strong>包括的な資産設計力</strong>
+          <span>全体最適を考えた提案</span>
+        </div>
+        <div class="kp-item">
+          <strong>長期伴走のコミット</strong>
+          <span>売却後もずっと寄り添う</span>
+        </div>
+        <div class="kp-item">
+          <strong>富裕層特化の知見</strong>
+          <span>売却後特有の課題に対応</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SUMMARY ========== -->
+<section class="section">
+  <div class="sec-head">
+    <div class="sec-kicker">SUMMARY</div>
+    <h2 class="sec-title">5つの方法　まとめ</h2>
+    <p class="sec-lead">この5つを実践することで、会社売却後の資産を正しく守ることができます。</p>
+  </div>
+
+  <table class="sum-table">
+    <thead>
+      <tr>
+        <th style="width:28%;">METHOD</th>
+        <th style="width:34%;">KEY POINT</th>
+        <th>SPECIFIC FIGURES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="sum-num">01</span><span class="sum-method">資産配分最適化</span></td>
+        <td class="sum-key">コア資産（株式・債券・不動産）を軸に</td>
+        <td class="sum-fig">運用結果の <span class="hl">9割</span> は資産配分で決まる</td>
+      </tr>
+      <tr>
+        <td><span class="sum-num">02</span><span class="sum-method">インカムゲイン獲得</span></td>
+        <td class="sum-key">外貨 ＋ 円建ての2本柱収入</td>
+        <td class="sum-fig">外貨 <span class="hl">5.0%</span> ＋ 円 <span class="hl">4.2%</span> の安定定期収入</td>
+      </tr>
+      <tr>
+        <td><span class="sum-num">03</span><span class="sum-method">インフレ対策強化</span></td>
+        <td class="sum-key">インフレ連動資産を多く保有</td>
+        <td class="sum-fig">国内外株式 ＋ 国内不動産で価値・収入が<span class="hl">連動増加</span></td>
+      </tr>
+      <tr>
+        <td><span class="sum-num">04</span><span class="sum-method">サテライト分散</span></td>
+        <td class="sum-key">コア 90% ＋ サテライト 10%</td>
+        <td class="sum-fig">REIT・ヘッジファンド・金などに <span class="hl">一部配分</span></td>
+      </tr>
+      <tr>
+        <td><span class="sum-num">05</span><span class="sum-method">アドバイザー探し</span></td>
+        <td class="sum-key">長期伴走型パートナーを探す</td>
+        <td class="sum-fig">売却前から <span class="hl">半年〜1年</span> かけて探し始める</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</div>
+
+<!-- ========== CTA（幅100%） ========== -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">INDIVIDUAL&nbsp;&nbsp;CONSULTATION</div>
+    <h2 class="cta-title">個別相談のご案内</h2>
+    <p class="cta-sub">会社売却後の資産運用を、具体的にご相談されたい方へ</p>
+
+    <div class="cta-card">
+      <h3 class="cta-card-ttl">個別相談でできること</h3>
+      <div class="cta-item">現状の資産状況の整理と分析</div>
+      <div class="cta-item">お客様に最適な資産配分プランのご提案</div>
+      <div class="cta-item">インカムゲイン・インフレ対策の具体的な投資先のご紹介</div>
+    </div>
+
+    <div class="cta-company">
+      <div class="cta-company-en">WEALTH&nbsp;PARTNER&nbsp;CO.,&nbsp;LTD.</div>
+      <div class="cta-company-ja">株式会社ウェルス・パートナー</div>
+      <div class="cta-company-rep">代表　世古口　俊介　│　会社売却後の資産運用専門</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
