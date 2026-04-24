@@ -819,33 +819,45 @@
 
   /* タイムライン（半年〜1年） */
   .timeline{
-    margin:40px 0;padding:50px 30px 30px;background:#fff;border:1px solid var(--line);
+    margin:40px 0;padding:40px 0 40px;background:#fff;border:1px solid var(--line);
     position:relative;
   }
+  .timeline-inner{
+    position:relative;padding:140px 120px 140px;
+  }
   .timeline-track{
-    position:relative;height:4px;background:linear-gradient(90deg,var(--navy-700),var(--gold));
-    margin:60px 40px 80px;
+    position:relative;height:4px;background:linear-gradient(90deg,var(--navy-700) 0%,var(--navy-500) 40%,var(--gold) 100%);
   }
   .timeline-point{
     position:absolute;top:50%;transform:translate(-50%,-50%);
-    width:24px;height:24px;border-radius:50%;background:#fff;
+    width:22px;height:22px;border-radius:50%;background:#fff;
     border:4px solid var(--gold);box-shadow:0 4px 12px rgba(163,134,63,.3);
+    z-index:2;
   }
   .timeline-point.start{border-color:var(--navy-700);}
   .timeline-point.end{background:var(--gold);}
   .timeline-label{
-    position:absolute;transform:translateX(-50%);text-align:center;width:200px;
+    position:absolute;transform:translateX(-50%);text-align:center;width:160px;
   }
-  .timeline-label.top{top:-50px;}
-  .timeline-label.bottom{bottom:-70px;}
-  .timeline-stage{font-family:'Inter',sans-serif;font-weight:700;font-size:11px;letter-spacing:.3em;color:var(--gold-dark);margin-bottom:6px;}
+  .timeline-label.top{bottom:calc(50% + 24px);}
+  .timeline-label.bottom{top:calc(50% + 24px);}
+  .timeline-stage{
+    font-family:'Inter',sans-serif;font-weight:700;font-size:11px;letter-spacing:.3em;
+    color:var(--gold-dark);margin-bottom:8px;
+  }
   .timeline-label.bottom .timeline-stage{color:var(--navy-700);}
-  .timeline-desc{font-size:13px;font-weight:700;color:var(--navy-900);letter-spacing:.08em;line-height:1.5;}
+  .timeline-desc{
+    font-size:13px;font-weight:700;color:var(--navy-900);letter-spacing:.08em;line-height:1.6;
+  }
   .timeline-span{
-    position:absolute;top:-35px;left:50%;transform:translateX(-50%);
-    padding:8px 20px;background:var(--gold-50);border:1px solid var(--gold);
-    font-family:'Inter',sans-serif;font-weight:800;font-size:16px;color:var(--gold-dark);
-    letter-spacing:.05em;
+    position:absolute;top:20px;left:50%;transform:translateX(-50%);
+    padding:10px 24px;background:var(--gold-50);border:1px solid var(--gold);
+    font-family:'Inter',sans-serif;font-weight:800;font-size:15px;color:var(--gold-dark);
+    letter-spacing:.1em;white-space:nowrap;
+  }
+  .timeline-heading{
+    text-align:center;font-size:15px;font-weight:700;color:var(--navy-900);
+    letter-spacing:.12em;padding:0 20px;
   }
 
   /* ---------- CTA ---------- */
@@ -1717,32 +1729,34 @@
 
     <!-- タイムライン -->
     <div class="timeline">
-      <div style="text-align:center;font-size:15px;font-weight:700;color:var(--navy-900);letter-spacing:.12em;margin-bottom:30px;">アドバイザー探しの理想タイムライン</div>
-      <div class="timeline-track">
-        <div class="timeline-span">6〜12 MONTH</div>
+      <div class="timeline-heading">アドバイザー探しの理想タイムライン</div>
+      <div class="timeline-inner">
+        <div class="timeline-track">
+          <div class="timeline-span">6〜12 MONTH</div>
 
-        <div class="timeline-point start" style="left:0%;"></div>
-        <div class="timeline-label top" style="left:0%;">
-          <div class="timeline-stage">START</div>
-          <div class="timeline-desc">売却の<br>半年〜1年前</div>
-        </div>
+          <div class="timeline-point start" style="left:0%;"></div>
+          <div class="timeline-label top" style="left:0%;">
+            <div class="timeline-stage">START</div>
+            <div class="timeline-desc">売却の<br>半年〜1年前</div>
+          </div>
 
-        <div class="timeline-point" style="left:35%;"></div>
-        <div class="timeline-label bottom" style="left:35%;">
-          <div class="timeline-stage">SEARCH</div>
-          <div class="timeline-desc">複数のアドバイザーと<br>面談・比較</div>
-        </div>
+          <div class="timeline-point" style="left:33.33%;"></div>
+          <div class="timeline-label bottom" style="left:33.33%;">
+            <div class="timeline-stage">SEARCH</div>
+            <div class="timeline-desc">複数のアドバイザーと<br>面談・比較</div>
+          </div>
 
-        <div class="timeline-point" style="left:70%;"></div>
-        <div class="timeline-label top" style="left:70%;">
-          <div class="timeline-stage">SELECT</div>
-          <div class="timeline-desc">最適な<br>パートナーを決定</div>
-        </div>
+          <div class="timeline-point" style="left:66.66%;"></div>
+          <div class="timeline-label top" style="left:66.66%;">
+            <div class="timeline-stage">SELECT</div>
+            <div class="timeline-desc">最適な<br>パートナーを決定</div>
+          </div>
 
-        <div class="timeline-point end" style="left:100%;"></div>
-        <div class="timeline-label bottom" style="left:100%;">
-          <div class="timeline-stage">GOAL</div>
-          <div class="timeline-desc">売却後すぐ<br>運用開始</div>
+          <div class="timeline-point end" style="left:100%;"></div>
+          <div class="timeline-label bottom" style="left:100%;">
+            <div class="timeline-stage">GOAL</div>
+            <div class="timeline-desc">売却後すぐ<br>運用開始</div>
+          </div>
         </div>
       </div>
     </div>
