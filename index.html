@@ -170,36 +170,35 @@
     color:var(--gold-dark);letter-spacing:.3em;margin-bottom:40px;
   }
 
-  .m1-blocks{display:flex;flex-direction:column;gap:28px;}
+  .m1-blocks{display:flex;flex-direction:column;gap:36px;}
   .m1-block{
-    padding:32px 36px;background:var(--navy-50);
-    border-left:4px solid var(--navy-700);
+    padding:42px 48px;background:var(--navy-50);
+    border-left:6px solid var(--navy-700);
   }
   .m1-block.gold{
     background:var(--gold-50);border-left-color:var(--gold);
   }
   .m1-block-head{
-    display:flex;align-items:baseline;justify-content:space-between;
-    margin-bottom:14px;
+    display:flex;align-items:center;justify-content:space-between;
+    margin-bottom:20px;
   }
   .m1-block-ttl{
-    font-weight:700;font-size:20px;color:var(--navy-900);letter-spacing:.1em;
+    font-weight:800;font-size:30px;color:var(--navy-900);letter-spacing:.1em;
   }
   .m1-block-pct{
-    font-family:'Inter',sans-serif;font-weight:700;font-size:22px;
-    color:var(--navy-700);
+    font-family:'Inter',sans-serif;font-weight:800;font-size:42px;
+    color:var(--navy-700);line-height:1;
   }
   .m1-block.gold .m1-block-pct{color:var(--gold-dark);}
   .m1-block-desc{
-    font-size:15px;color:var(--text-500);line-height:1.9;
-    letter-spacing:.05em;margin-bottom:16px;
+    display:none;
   }
-  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chips{display:flex;flex-wrap:wrap;gap:12px;}
   .chip{
-    padding:7px 16px;font-size:13px;font-weight:500;
-    letter-spacing:.08em;color:var(--navy-800);
-    background:#fff;border:1px solid var(--line-strong);
-    border-radius:2px;
+    padding:14px 22px;font-size:18px;font-weight:700;
+    letter-spacing:.1em;color:var(--navy-800);
+    background:#fff;border:1.5px solid var(--line-strong);
+    border-radius:4px;
   }
   .chip.gold{color:var(--gold-dark);border-color:var(--gold);background:#fff;}
 
@@ -251,18 +250,16 @@
   }
 
   .m2-note{
-    padding:40px 48px;background:var(--navy-50);
-    border-left:4px solid var(--navy-700);
-    display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;
+    padding:48px 56px;background:var(--navy-50);
+    border-left:6px solid var(--gold);
+    text-align:center;
   }
   .m2-note-head{
-    font-weight:700;font-size:28px;color:var(--navy-900);
-    letter-spacing:.1em;line-height:1.5;white-space:nowrap;
+    font-weight:800;font-size:34px;color:var(--navy-900);
+    letter-spacing:.1em;line-height:1.5;
   }
   .m2-note-head em{color:var(--gold-dark);font-style:normal;}
-  .m2-note-body{
-    font-size:16px;color:var(--text-500);line-height:2;letter-spacing:.06em;
-  }
+  .m2-note-body{display:none;}
 
   .m2-combo{
     margin-top:30px;padding:36px 40px;
@@ -280,6 +277,34 @@
     font-size:15px;color:var(--text-700);line-height:1.9;letter-spacing:.05em;
   }
   .m2-combo-body strong{color:var(--gold-dark);font-weight:700;}
+
+  /* 2本柱コンビネーション ビジュアル */
+  .m2-combo-visual{
+    margin-top:24px;
+    display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:stretch;
+  }
+  .m2-combo-card{
+    background:#fff;border:1.5px solid var(--gold);
+    padding:28px 24px;text-align:center;
+  }
+  .m2-combo-card.navy{border-color:var(--navy-500);}
+  .m2-combo-card .cc-badge{
+    display:inline-block;font-family:'Inter',sans-serif;font-weight:800;
+    font-size:14px;letter-spacing:.25em;color:var(--gold-dark);
+    border:1.5px solid var(--gold);padding:6px 14px;border-radius:2px;margin-bottom:14px;
+  }
+  .m2-combo-card.navy .cc-badge{color:var(--navy-700);border-color:var(--navy-500);}
+  .m2-combo-card .cc-ttl{
+    font-weight:800;font-size:20px;color:var(--navy-900);
+    letter-spacing:.1em;margin-bottom:6px;
+  }
+  .m2-combo-card .cc-sub{
+    font-size:14px;color:var(--text-500);letter-spacing:.08em;line-height:1.7;
+  }
+  .m2-combo-plus{
+    font-family:'Inter',sans-serif;font-weight:800;font-size:34px;
+    color:var(--gold-dark);align-self:center;
+  }
 
   /* ---------- METHOD 3 : インフレ ---------- */
   .m3-rank{
@@ -767,25 +792,34 @@
 
   /* インフレ矢印図 */
   .inflation-viz{
-    display:grid;grid-template-columns:1fr 80px 1fr;gap:0;align-items:center;margin:40px 0;
+    display:grid;grid-template-columns:1fr 80px 1fr;gap:0;align-items:stretch;margin:40px 0;
   }
   .inf-side{
-    padding:40px 32px;text-align:center;border:1px solid var(--line);
-    display:flex;flex-direction:column;gap:16px;align-items:center;
+    padding:48px 32px;text-align:center;border:1.5px solid var(--line);
+    display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:center;
   }
   .inf-side.before{background:var(--navy-50);}
   .inf-side.after{background:var(--warn-bg);border-color:#f2c0c0;}
-  .inf-side-ttl{font-size:13px;font-weight:700;letter-spacing:.3em;color:var(--text-500);}
-  .inf-side.after .inf-side-ttl{color:var(--warn);}
+  .inf-side-ttl{
+    font-family:'Inter',sans-serif;font-weight:800;font-size:13px;
+    letter-spacing:.35em;color:var(--text-500);
+    border:1.5px solid var(--text-500);padding:6px 16px;
+  }
+  .inf-side.before .inf-side-ttl{color:var(--navy-700);border-color:var(--navy-700);}
+  .inf-side.after .inf-side-ttl{color:var(--warn);border-color:var(--warn);}
   .inf-icon{
-    font-family:'Inter',sans-serif;font-weight:800;font-size:48px;line-height:1;
+    font-family:'Inter',sans-serif;font-weight:800;font-size:64px;line-height:1;
   }
   .inf-side.before .inf-icon{color:var(--navy-700);}
   .inf-side.after .inf-icon{color:var(--warn);}
-  .inf-side-desc{font-size:14px;font-weight:700;color:var(--navy-900);letter-spacing:.08em;line-height:1.7;}
+  .inf-side-desc{
+    font-size:22px;font-weight:800;color:var(--navy-900);
+    letter-spacing:.06em;line-height:1.6;
+  }
+  .inf-side-desc strong{font-size:24px;}
   .inf-side.after .inf-side-desc{color:var(--warn);}
   .inf-arrow{
-    text-align:center;font-family:'Inter',sans-serif;font-weight:700;font-size:36px;color:var(--gold-dark);
+    text-align:center;font-family:'Inter',sans-serif;font-weight:700;font-size:42px;color:var(--gold-dark);
   }
 
   .hedge-grid{
@@ -819,10 +853,16 @@
   }
   .phase-col.after .phase-lbl{background:var(--gold-dark);}
   .phase-ttl{font-size:20px;font-weight:900;color:var(--navy-900);letter-spacing:.1em;margin-bottom:16px;line-height:1.5;}
-  .phase-list{display:flex;flex-direction:column;gap:10px;}
+  .phase-list{display:flex;flex-direction:column;gap:14px;}
   .phase-item{
-    padding:12px 14px;background:#fff;border-left:3px solid var(--navy-700);
-    font-size:14px;color:var(--text-700);letter-spacing:.05em;line-height:1.6;
+    padding:18px 18px 18px 56px;background:#fff;border-left:4px solid var(--navy-700);
+    font-size:15px;font-weight:700;color:var(--navy-900);letter-spacing:.05em;line-height:1.5;
+    position:relative;
+  }
+  .phase-item::before{
+    content:attr(data-icon);
+    position:absolute;left:18px;top:50%;transform:translateY(-50%);
+    font-size:22px;line-height:1;
   }
   .phase-col.after .phase-item{border-left-color:var(--gold);}
   .phase-arrow-col{display:flex;align-items:center;justify-content:center;
@@ -1011,7 +1051,6 @@
     <div class="chapter-meta">
       <div class="chapter-kicker">METHOD ONE</div>
       <h2 class="chapter-title">資産配分全体の最適化</h2>
-      <p class="chapter-lead">運用結果の9割は資産配分で決まる。<br>まず全体設計の最適化が最重要です。</p>
     </div>
   </div>
 </section>
@@ -1044,7 +1083,6 @@
       </div>
       <div class="ninewari-text">
         <h4>運用結果の<em>9割</em>は<br>資産配分で決まる</h4>
-        <p>銘柄選びやタイミングよりも、どの資産クラスを、どの比率で持つか。この「配分の設計」こそが、長期的なリターンの大半を左右します。</p>
       </div>
     </div>
 
@@ -1152,7 +1190,6 @@
           <div class="m1-block-ttl">コア資産</div>
           <div class="m1-block-pct">約 90%</div>
         </div>
-        <p class="m1-block-desc">株式・債券・不動産の3本柱で、安定したリターンと定期収入を確保します。</p>
         <div class="chips">
           <span class="chip gold">株式　35%</span>
           <span class="chip gold">債券　30%</span>
@@ -1164,7 +1201,6 @@
           <div class="m1-block-ttl">サテライト資産</div>
           <div class="m1-block-pct">約 10%</div>
         </div>
-        <p class="m1-block-desc">リスク分散目的で一部資金を配分。万が一に備えた保険的な役割を担います。</p>
         <div class="chips">
           <span class="chip">REIT</span>
           <span class="chip">ヘッジファンド</span>
@@ -1185,7 +1221,6 @@
     <div class="chapter-meta">
       <div class="chapter-kicker">METHOD TWO</div>
       <h2 class="chapter-title">インカムゲインの獲得</h2>
-      <p class="chapter-lead">役員報酬を投資収入で代替する。<br>外貨と円建て、2本柱の定期収入を設計します。</p>
     </div>
   </div>
 </section>
@@ -1259,7 +1294,6 @@
       </div>
       <div class="ss-desc">
         <div class="ss-desc-ttl">米ドル建てを中心とした<br>外貨建て債券への投資</div>
-        <p class="ss-desc-body">米ドルを含めた外貨建て債券への投資によって発生する <strong>利息収入</strong> を、インカムゲインとして受け取っていきます。</p>
         <div class="ss-chips">
           <span class="ss-chip">米国債</span>
           <span class="ss-chip">先進国社債</span>
@@ -1444,13 +1478,24 @@
 
   <div class="m2-note">
     <div class="m2-note-head">役員報酬ゼロを<br><em>2本柱の定期収入</em>で代替</div>
-    <div class="m2-note-body">会社売却後は役員報酬がなくなります。外貨と円建て、2つのインカムで現役時代と同等の生活水準を維持することが大前提です。</div>
   </div>
 
   <div class="m2-combo">
     <div class="m2-combo-ttl">COMBINATION EFFECT</div>
     <h3 class="m2-combo-sub">2本柱の組み合わせ効果</h3>
-    <p class="m2-combo-body">外貨建てで<strong>為替・金利メリット</strong>を享受しつつ、円建て不動産で<strong>国内生活費</strong>をカバー。通貨分散も同時に実現します。</p>
+    <div class="m2-combo-visual">
+      <div class="m2-combo-card">
+        <div class="cc-badge">USD</div>
+        <div class="cc-ttl">外貨建て</div>
+        <div class="cc-sub">為替・金利<br>メリットを享受</div>
+      </div>
+      <div class="m2-combo-plus">＋</div>
+      <div class="m2-combo-card navy">
+        <div class="cc-badge">JPY</div>
+        <div class="cc-ttl">円建て不動産</div>
+        <div class="cc-sub">国内生活費を<br>直接カバー</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1461,7 +1506,6 @@
     <div class="chapter-meta">
       <div class="chapter-kicker">METHOD THREE</div>
       <h2 class="chapter-title">インフレ対策の強化</h2>
-      <p class="chapter-lead">会社売却後はインフレに弱くなる。<br>資産そのものでインフレをヘッジする戦略が必要です。</p>
     </div>
   </div>
 </section>
@@ -1475,15 +1519,15 @@
     <!-- BEFORE / AFTER -->
     <div class="inflation-viz">
       <div class="inf-side before">
-        <div class="inf-side-ttl">売却前</div>
+        <div class="inf-side-ttl">BEFORE　売却前</div>
         <div class="inf-icon">🏢</div>
-        <div class="inf-side-desc">インフレになると<br><strong style="color:var(--navy-900);">報酬・売上が増えて</strong><br>インフレに対応できる</div>
+        <div class="inf-side-desc"><strong>報酬・売上が増え</strong><br>インフレに対応</div>
       </div>
       <div class="inf-arrow">▶</div>
       <div class="inf-side after">
-        <div class="inf-side-ttl">売却後</div>
+        <div class="inf-side-ttl">AFTER　売却後</div>
         <div class="inf-icon">✕</div>
-        <div class="inf-side-desc">会社収入なし<br><strong>報酬・売上の<br>増加がない</strong></div>
+        <div class="inf-side-desc"><strong>会社収入なし</strong><br>増加機会を喪失</div>
       </div>
     </div>
 
@@ -1614,7 +1658,6 @@
     <div class="chapter-meta">
       <div class="chapter-kicker">METHOD FOUR</div>
       <h2 class="chapter-title">サテライト資産への<br style="display:none">リスク分散</h2>
-      <p class="chapter-lead">コア資産90% ＋ サテライト10% のバランス運用で、<br>万が一のシナリオにも備えます。</p>
     </div>
   </div>
 </section>
@@ -1706,10 +1749,10 @@
         <div class="phase-lbl">BEFORE　売却前</div>
         <div class="phase-ttl">経営者フェーズ</div>
         <div class="phase-list">
-          <div class="phase-item">毎月の<strong>役員報酬</strong>あり</div>
-          <div class="phase-item">会社資産と個人資産が<strong>未分離</strong></div>
-          <div class="phase-item">資金繰り・事業投資が中心</div>
-          <div class="phase-item">アドバイザーは顧問税理士・銀行担当者</div>
+          <div class="phase-item" data-icon="💴">毎月の役員報酬あり</div>
+          <div class="phase-item" data-icon="🏢">会社資産と個人資産が未分離</div>
+          <div class="phase-item" data-icon="📊">資金繰り・事業投資が中心</div>
+          <div class="phase-item" data-icon="👤">税理士・銀行担当者がアドバイザー</div>
         </div>
       </div>
       <div class="phase-arrow-col">▶<br><span style="font-size:10px;letter-spacing:.3em;color:var(--gold-dark);margin-top:8px;font-weight:600;">SELL</span></div>
@@ -1717,19 +1760,34 @@
         <div class="phase-lbl">AFTER　売却後</div>
         <div class="phase-ttl">資産運用フェーズ</div>
         <div class="phase-list">
-          <div class="phase-item">役員報酬ゼロ・<strong>インカム設計必須</strong></div>
-          <div class="phase-item">まとまった<strong>個人金融資産</strong>が発生</div>
-          <div class="phase-item">資産配分・インフレ対策が中心</div>
-          <div class="phase-item">富裕層向けの<strong>資産運用アドバイザー</strong>が必要</div>
+          <div class="phase-item" data-icon="📉">役員報酬ゼロ・インカム設計必須</div>
+          <div class="phase-item" data-icon="💎">まとまった個人金融資産が発生</div>
+          <div class="phase-item" data-icon="🛡️">資産配分・インフレ対策が中心</div>
+          <div class="phase-item" data-icon="🤝">富裕層向け資産運用アドバイザーが必要</div>
         </div>
       </div>
     </div>
 
     <!-- 人脈ギャップ -->
-    <div style="margin-top:50px;padding:40px 48px;background:var(--warn-bg);border-left:4px solid var(--warn);">
-      <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:12px;letter-spacing:.3em;color:var(--warn);margin-bottom:12px;">GAP　│　人脈のギャップ</div>
-      <div style="font-size:20px;font-weight:900;color:var(--navy-900);letter-spacing:.08em;line-height:1.6;">売却前の人脈には、<span style="color:var(--warn);">売却後の資産最適化ができる人が少ない</span></div>
-      <div style="font-size:15px;color:var(--text-700);line-height:1.9;letter-spacing:.05em;margin-top:14px;">経営者として接してきた税理士・銀行担当者は、<strong style="color:var(--navy-900);">事業のプロ</strong>であっても<strong style="color:var(--navy-900);">富裕層の資産運用のプロとは限らない</strong>。今のフェーズに合った新しいパートナーを探す必要があります。</div>
+    <div style="margin-top:50px;padding:48px 48px 56px;background:var(--warn-bg);border-left:6px solid var(--warn);">
+      <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:12px;letter-spacing:.3em;color:var(--warn);margin-bottom:14px;text-align:center;">GAP　│　人脈のギャップ</div>
+      <div style="font-size:24px;font-weight:900;color:var(--navy-900);letter-spacing:.08em;line-height:1.6;text-align:center;margin-bottom:36px;">売却前の人脈には<br><span style="color:var(--warn);">資産最適化ができる人が少ない</span></div>
+
+      <div style="display:grid;grid-template-columns:1fr 60px 1fr;gap:0;align-items:stretch;">
+        <div style="background:#fff;border:1.5px solid var(--line-strong);padding:28px 24px;text-align:center;">
+          <div style="font-family:'Inter',sans-serif;font-weight:800;font-size:11px;letter-spacing:.3em;color:var(--text-500);margin-bottom:10px;">EXISTING NETWORK</div>
+          <div style="font-size:36px;line-height:1;margin-bottom:10px;">👤</div>
+          <div style="font-size:18px;font-weight:800;color:var(--navy-900);letter-spacing:.08em;line-height:1.5;">税理士・銀行担当者</div>
+          <div style="font-size:13px;color:var(--text-500);margin-top:8px;letter-spacing:.05em;">事業のプロ</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-weight:800;font-size:32px;color:var(--warn);">≠</div>
+        <div style="background:#fff;border:1.5px solid var(--gold);padding:28px 24px;text-align:center;">
+          <div style="font-family:'Inter',sans-serif;font-weight:800;font-size:11px;letter-spacing:.3em;color:var(--gold-dark);margin-bottom:10px;">NEEDED PARTNER</div>
+          <div style="font-size:36px;line-height:1;margin-bottom:10px;">🤝</div>
+          <div style="font-size:18px;font-weight:800;color:var(--navy-900);letter-spacing:.08em;line-height:1.5;">資産運用アドバイザー</div>
+          <div style="font-size:13px;color:var(--gold-dark);margin-top:8px;letter-spacing:.05em;font-weight:700;">富裕層の資産運用のプロ</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1771,22 +1829,6 @@
             <div class="timeline-desc">売却後すぐ<br>運用開始</div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- 2パターン比較 -->
-    <div class="pillars" style="margin-top:20px;">
-      <div class="pillar-col gold">
-        <div class="pillar-badge">BEST　│　理想</div>
-        <div class="pillar-icon-big" style="font-size:16px;letter-spacing:.05em;">6-12<br>MONTH</div>
-        <div class="pillar-title">売却前から探し始める</div>
-        <div class="pillar-asset">半年〜1年かけて吟味し<br><strong>売却後すぐに運用開始</strong>できる</div>
-      </div>
-      <div class="pillar-col navy">
-        <div class="pillar-badge">OK　│　次善</div>
-        <div class="pillar-icon-big" style="font-size:14px;letter-spacing:.05em;">AFTER<br>SALE</div>
-        <div class="pillar-title">売却後でも丁寧に探す</div>
-        <div class="pillar-asset">焦らず比較検討し、<br><strong>長期伴走できる相手</strong>を選ぶ</div>
       </div>
     </div>
 
